@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ContinueButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void ContinueToComparison ()
+    public void ContinueToScores ()
     {
         global::System.Object value = SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
