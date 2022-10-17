@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+
     public bool isStart;
     public bool isQuit;
     void OnMouseUp()

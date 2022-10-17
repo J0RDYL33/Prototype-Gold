@@ -6,16 +6,16 @@ public class MouseOver : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Renderer>().material.color = Color.black;
+        GetComponent<Renderer>().material.color = Color.yellow;
     }
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.yellow;
+        GetComponent<Renderer>().material.color = Color.black;
     }
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = Color.black;
+        GetComponent<Renderer>().material.color = Color.yellow;
     }
 }
