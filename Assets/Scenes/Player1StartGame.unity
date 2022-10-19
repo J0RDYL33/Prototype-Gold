@@ -470,6 +470,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1667347137}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: player1Turn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: cameraShaker
       value: 
       objectReference: {fileID: 1382827929}
