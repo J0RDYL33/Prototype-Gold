@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GetUpdateInfo : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class GetUpdateInfo : MonoBehaviour
     void Start()
     {
         myInfo = FindObjectOfType<SavedInfomation>();
-
-        UpdateGoldText();
+        if(SceneManager.GetActiveScene().buildIndex == 2)
+            UpdateGoldText();
+        else if(SceneManager.GetActiveScene().buildIndex == 5)
+            UpdateGoldText2();
     }
 
     // Update is called once per frame
@@ -25,5 +28,10 @@ public class GetUpdateInfo : MonoBehaviour
     public void UpdateGoldText()
     {
         goldText.text = "Total Gold: " + myInfo.player1SavedGold;
+    }
+
+    public void UpdateGoldText2()
+    {
+        goldText.text = "Total Gold: " + myInfo.player2SavedGold;
     }
 }

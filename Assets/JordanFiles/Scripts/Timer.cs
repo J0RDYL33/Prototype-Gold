@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 30;
+        timer = 10;
         myMover = FindObjectOfType<OreMover>();
     }
 
@@ -35,6 +35,10 @@ public class Timer : MonoBehaviour
     {
         myMover.UpdateSavedInfo();
         //Load next scene in the index
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex == 6)
+            SceneManager.LoadScene(2);
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }
