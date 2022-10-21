@@ -523,6 +523,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+--- !u!1 &2532150241734522256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2532150242501976262, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+  m_PrefabInstance: {fileID: 2532150241734522255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!122 &2532150241734522257
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532150241734522256}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4280259762
+  m_Size: 5
 --- !u!1001 &3021571393603954863
 PrefabInstance:
   m_ObjectHideFlags: 0
