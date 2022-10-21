@@ -8,9 +8,9 @@ public class HealthScript : MonoBehaviour
 
     public float damage;
     public float healing;
+    public HealthBar healthBar;
     // Define the health changed event and handler delegate.
     public delegate void HealthChangedHandler(object source, float oldHealth, float newHealth);
-    public event HealthChangedHandler OnHealthChanged;
 
     // Show in inspector
     [SerializeField]
@@ -31,12 +31,15 @@ public class HealthScript : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         // Fire off health change event.
-        OnHealthChanged?.Invoke(this, oldHealth, currentHealth);
+        healthBar.SetHealth(this, oldHealth, currentHealth);
     }
 
-    // Test code
-    void Update()
+
+
+        // Test code
+        void Update()
     {
+        curHealth -= damage;
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeHealth(testHealAmount);

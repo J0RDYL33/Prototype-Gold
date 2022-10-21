@@ -1,32 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public int curHealth = 0;
-    public int maxHealth = 3; //Equilvent to eg.. 3 hearts/lifepoints
+    public Slider healthBar;
+    public Health playerHealth;
 
-    public HealthBar healthBar;
-
-    void Start()
+    private void Start()
     {
-        curHealth = maxHealth;
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        healthBar = GetComponent<Slider>();
+        healthBar.maxValue = playerHealth.maxHealth;
+        healthBar.value = playerHealth.maxHealth;
     }
 
-    void Update()
+    public void SetHealth(int hp)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DamagePlayer(1);
-        }
-    }
-
-    public void DamagePlayer(int damage)
-    {
-        curHealth -= damage;
-
-        healthBar.SetHealth(curHealth);
+        healthBar.value = hp;
     }
 }
 
