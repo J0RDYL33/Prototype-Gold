@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
         }
         if (isSettings)
         {
-            Application.LoadLevel(2);
+            Application.LoadLevel(8);
         }
         if (isQuit)
         {
