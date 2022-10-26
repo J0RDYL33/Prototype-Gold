@@ -11,6 +11,17 @@ public class SavedInfomation : MonoBehaviour
     public int player1Lives;
     public int player2Lives;
 
+    public bool[] player1Benefits = new bool[4];
+    public int[] player1BenefitsCosts = new int[4];
+    public bool[] player2Benefits = new bool[4];
+    public int[] player2BenefitsCosts = new int[4];
+
+    public bool[] player1Detriments = new bool[4];
+    public int[] player1DetrimentsCosts = new int[4];
+    public bool[] player2Detriments = new bool[4];
+    public int[] player2DetrimentsCosts = new int[4];
+
+    //ADD: Detriments
     // Start is called before the first frame update
     void Start()
     {

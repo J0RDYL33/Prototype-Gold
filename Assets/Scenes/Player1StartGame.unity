@@ -357,11 +357,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
       propertyPath: player1Lives
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
       propertyPath: player2Lives
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1Benefit1Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1Benefit2Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1Benefit3Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1Benefit4Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2Benefit1Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2Benefit2Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2Benefit3Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2Benefit4Cost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1BenefitsCosts.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1BenefitsCosts.Array.data[1]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1BenefitsCosts.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1BenefitsCosts.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2BenefitsCosts.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2BenefitsCosts.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2BenefitsCosts.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2BenefitsCosts.Array.data[3]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1DetrimentsCosts.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1DetrimentsCosts.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1DetrimentsCosts.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player1DetrimentsCosts.Array.data[3]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2DetrimentsCosts.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2DetrimentsCosts.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2DetrimentsCosts.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 586596557766953539, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}
+      propertyPath: player2DetrimentsCosts.Array.data[3]
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85f45b9ed32389f45929c2a1ac17ae4c, type: 3}

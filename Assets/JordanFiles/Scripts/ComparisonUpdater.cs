@@ -33,12 +33,6 @@ public class ComparisonUpdater : MonoBehaviour
         player2Total.text = "Total Gold: " + myInfo.player2SavedGold;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChooseNextScene()
     {
         if(myInfo.player1Lives == 0 || myInfo.player2Lives == 0)
