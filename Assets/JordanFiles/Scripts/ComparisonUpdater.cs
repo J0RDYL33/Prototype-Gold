@@ -22,15 +22,24 @@ public class ComparisonUpdater : MonoBehaviour
         player2Score.text = myInfo.player2Score + "";
 
         if (myInfo.player1Score > myInfo.player2Score)
+        {
             myInfo.player2Lives--;
+            player1Score.color = Color.green;
+            player2Score.color = Color.red;
+        }
         else if (myInfo.player1Score < myInfo.player2Score)
+        {
             myInfo.player1Lives--;
+            player1Score.color = Color.red;
+            player2Score.color = Color.green;
+        }
 
         player1Lives.text = "Lives Left: " + myInfo.player1Lives;
         player2Lives.text = "Lives Left: " + myInfo.player2Lives;
 
         player1Total.text = "Total Gold: " + myInfo.player1SavedGold;
         player2Total.text = "Total Gold: " + myInfo.player2SavedGold;
+
     }
 
     public void ChooseNextScene()
@@ -41,7 +50,7 @@ public class ComparisonUpdater : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(2);
         }
     }
 }

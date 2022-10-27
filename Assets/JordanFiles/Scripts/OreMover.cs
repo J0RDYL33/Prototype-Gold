@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OreMover : MonoBehaviour
 {
@@ -11,7 +12,15 @@ public class OreMover : MonoBehaviour
     public ScreenShake rockShaker;
     public ScreenShake cameraShaker;
     public GameObject nuggetParticles;
+    public GameObject dupeNugget;
+    public bool isDupe;
+    public Sprite basicNugget;
+    public Sprite rareNugget;
+    public FakeOreMover fakeNugget;
 
+    private Timer myTimer;
+    private SpriteRenderer mySprite;
+    private bool isRareNugget;
     private GameObject particleTemp;
     private SavedInfomation savedInfo;
     private Vector2 xBounds;
@@ -25,14 +34,100 @@ public class OreMover : MonoBehaviour
         yBounds.y = -2.6f;
 
         savedInfo = FindObjectOfType<SavedInfomation>();
+        mySprite = this.GetComponent<SpriteRenderer>();
+        myTimer = FindObjectOfType<Timer>();
 
         UpdateScore();
+
+        //Reset score in savedInfo
+        if (player1Turn)
+            savedInfo.player1Score = 0;
+        else
+            savedInfo.player2Score = 0;
+
+        //Bigger Gold Nugget Benefit
+        if(player1Turn == true && savedInfo.player1Benefits[0] == true)
+        {
+            Debug.Log("Making Bigger!");
+            this.gameObject.transform.localScale = new Vector2(this.gameObject.transform.localScale.x * 1.5f, this.gameObject.transform.localScale.y * 1.5f);
+        }
+        else if (player1Turn == false && savedInfo.player2Benefits[0] == true)
+        {
+            Debug.Log("Making Bigger!");
+            this.gameObject.transform.localScale = new Vector2(this.gameObject.transform.localScale.x * 1.5f, this.gameObject.transform.localScale.y * 1.5f);
+        }
+
+        //Double gold nugget Benefit
+        if (player1Turn == true && savedInfo.player1Benefits[1] == false)
+        {
+            Debug.Log("destroy dupe!");
+            Destroy(dupeNugget);
+        }
+        else if (player1Turn == false && savedInfo.player2Benefits[1] == false)
+        {
+            Debug.Log("destroy dupe!");
+            Destroy(dupeNugget);
+        }
+
+        //Add to timer benefit
+        if (player1Turn == true && savedInfo.player1Benefits[3] == true && isDupe == false)
+        {
+            Debug.Log("Adding Time!");
+            myTimer.AddToTime(3.0f);
+        }
+        else if (player1Turn == false && savedInfo.player2Benefits[3] == true && isDupe == false)
+        {
+            Debug.Log("Adding Time!");
+            myTimer.AddToTime(3.0f);
+        }
+
+        //Shrink nugget detriment
+        if (player1Turn == true && savedInfo.player1Detriments[2] == true)
+        {
+            Debug.Log("Making Smaller!");
+            this.gameObject.transform.localScale = new Vector2(this.gameObject.transform.localScale.x / 1.5f, this.gameObject.transform.localScale.y / 1.5f);
+        }
+        else if (player1Turn == false && savedInfo.player2Detriments[2] == true)
+        {
+            Debug.Log("Making Smaller!");
+            this.gameObject.transform.localScale = new Vector2(this.gameObject.transform.localScale.x / 1.5f, this.gameObject.transform.localScale.y / 1.5f);
+        }
+
+        //Move nugget detriment
+        if(player1Turn == true && savedInfo.player1Detriments[1] == true)
+        {
+            StartCoroutine(MoveTheNugget1());
+        }
+        else if (player1Turn == true && savedInfo.player1Detriments[1] == true)
+        {
+            StartCoroutine(MoveTheNugget2());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator MoveTheNugget1()
     {
-        
+        while (savedInfo.player1Detriments[1] == true)
+        {
+            yield return new WaitForSeconds(1.5f);
+            MoveNug();
+        }
+    }
+
+    IEnumerator MoveTheNugget2()
+    {
+        while (savedInfo.player2Detriments[1] == true)
+        {
+            yield return new WaitForSeconds(1.5f);
+            MoveNug();
+        }
+    }
+
+    public void MoveNug()
+    {
+        //Move the nugget
+        float newX = Random.Range(xBounds.y, xBounds.x + 0.1f);
+        float newy = Random.Range(yBounds.y, yBounds.x + 0.1f);
+        this.gameObject.transform.position = new Vector2(newX, newy);
     }
 
     private void OnMouseDown()
@@ -46,7 +141,75 @@ public class OreMover : MonoBehaviour
         rockShaker.ShakeCamera(0.1f);
 
         //Increase the score by 1 when the nugget is clicked
-        playerScore++;
+        if(player1Turn)
+        {
+            savedInfo.player1Score++;
+        }
+        else
+        {
+            savedInfo.player2Score++;
+        }
+
+        //If the nugget clicked is a rare one, add an extra point
+        if (isRareNugget)
+        {
+            if (player1Turn)
+            {
+                savedInfo.player1Score++;
+            }
+            else
+            {
+                savedInfo.player2Score++;
+            }
+        }
+
+        //Decide if the next nugget will be a rare one & move fake nugget if enabled
+        if(player1Turn)
+        {
+            if(savedInfo.player1Benefits[2])
+            {
+                int decideRare = Random.Range(0, 5);
+                if (decideRare == 0)
+                {
+                    mySprite.sprite = rareNugget;
+                    isRareNugget = true;
+                }
+                else
+                {
+                    mySprite.sprite = basicNugget;
+                    isRareNugget = false;
+                }
+            }
+
+            if(savedInfo.player1Detriments[3])
+            {
+                fakeNugget.MoveFaker();
+            }
+        }
+        else if (!player1Turn)
+        {
+            if (savedInfo.player2Benefits[2])
+            {
+                int decideRare = Random.Range(0, 5);
+                if (decideRare == 0)
+                {
+                    mySprite.sprite = rareNugget;
+                    isRareNugget = true;
+                }
+                else
+                {
+                    mySprite.sprite = basicNugget;
+                    isRareNugget = false;
+                }
+            }
+
+            if (savedInfo.player2Detriments[3])
+            {
+                fakeNugget.MoveFaker();
+            }
+        }
+
+
 
         //Edit the score displayed on screen
         UpdateScore();
@@ -59,18 +222,29 @@ public class OreMover : MonoBehaviour
 
     private void UpdateScore()
     {
-        scoreText.text = "Score: " + playerScore;
+        if(player1Turn)
+            scoreText.text = "Score: " + savedInfo.player1Score;
+        else
+            scoreText.text = "Score: " + savedInfo.player2Score;
     }
 
     public void UpdateSavedInfo()
     {
-        if(player1Turn)
+        if (!isDupe)
         {
-            savedInfo.End1Round(playerScore);
-        }
-        else
-        {
-            savedInfo.End2Round(playerScore);
+            if(SceneManager.GetActiveScene().buildIndex == 1 && savedInfo.player1Score > 5)
+            {
+                savedInfo.player1Score -= 5;
+            }
+
+            if (player1Turn)
+            {
+                savedInfo.End1Round();
+            }
+            else
+            {
+                savedInfo.End2Round();
+            }
         }
     }
 }

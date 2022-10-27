@@ -7,14 +7,17 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
+    public OreMover myMover;
 
     private float timer;
-    private OreMover myMover;
+    private float howMuchToAdd;
+    private SavedInfomation myInfo;
     // Start is called before the first frame update
     void Start()
     {
         timer = 15;
-        myMover = FindObjectOfType<OreMover>();
+        timer += howMuchToAdd;
+        myInfo = FindObjectOfType<SavedInfomation>();
     }
 
     void FixedUpdate()
@@ -42,8 +45,9 @@ public class Timer : MonoBehaviour
 
     }
 
-    public void AddToTime(int timeToAdd)
+    public void AddToTime(float timeToAdd)
     {
-        timer += timeToAdd;
+        howMuchToAdd = timeToAdd;
+        Debug.Log("Timer is now " + timer);
     }
 }

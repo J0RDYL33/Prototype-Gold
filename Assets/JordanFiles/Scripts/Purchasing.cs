@@ -32,6 +32,7 @@ public class Purchasing : MonoBehaviour
         slot3Pos = new Vector2(111, -36);
         slot4Pos = new Vector2(323, -36);
 
+        MakePricesFair();
         UpdatePrices();
         UpdateCostColors();
         StockShop();
@@ -68,10 +69,31 @@ public class Purchasing : MonoBehaviour
         detCards[secondDet].transform.localPosition = slot4Pos;
     }
 
+    private void MakePricesFair()
+    {
+        if(myInfo.player1Lives > myInfo.player2Lives)
+        {
+            for(int i = 0; i < myInfo.player1Benefits.Length; i++)
+            {
+                myInfo.player2BenefitsCosts[i] -= 3;
+                myInfo.player2DetrimentsCosts[i] -= 3;
+            }
+        }
+        else if (myInfo.player1Lives < myInfo.player2Lives)
+        {
+            for (int i = 0; i < myInfo.player1Benefits.Length; i++)
+            {
+                myInfo.player1BenefitsCosts[i] -= 3;
+                myInfo.player1DetrimentsCosts[i] -= 3;
+            }
+        }
+    }
+
     private void UpdatePrices()
     {
         if (player1Turn == true)
         {
+            totalText.text = "Total Gold: " + myInfo.player1SavedGold;
             for (int i = 0; i < 4; i++)
             {
                 costTexts[i].text = "Cost: " + myInfo.player1BenefitsCosts[i] + " Gold";
@@ -84,6 +106,7 @@ public class Purchasing : MonoBehaviour
         }
         else if (player1Turn == false)
         {
+            totalText.text = "Total Gold: " + myInfo.player2SavedGold;
             for (int i = 0; i < 4; i++)
             {
                 costTexts[i].text = "Cost: " + myInfo.player2BenefitsCosts[i] + " Gold";

@@ -21,6 +21,8 @@ public class SavedInfomation : MonoBehaviour
     public bool[] player2Detriments = new bool[4];
     public int[] player2DetrimentsCosts = new int[4];
 
+    public bool hasResetFirst;
+
     //ADD: Detriments
     // Start is called before the first frame update
     void Start()
@@ -28,16 +30,34 @@ public class SavedInfomation : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void End1Round(int roundScore)
+    public void End1Round()
     {
-        player1Score = roundScore;
-        player1SavedGold += roundScore;
+        player1SavedGold += player1Score;
+
+        for(int i = 0; i < player1Benefits.Length; i++)
+        {
+            player1Benefits[i] = false;
+        }
+
+        for (int i = 0; i < player1Detriments.Length; i++)
+        {
+            player1Detriments[i] = false;
+        }
     }
 
-    public void End2Round(int roundScore)
+    public void End2Round()
     {
-        player2Score = roundScore;
-        player2SavedGold += roundScore;
+        player2SavedGold += player2Score;
+
+        for (int i = 0; i < player2Benefits.Length; i++)
+        {
+            player2Benefits[i] = false;
+        }
+
+        for (int i = 0; i < player2Detriments.Length; i++)
+        {
+            player2Detriments[i] = false;
+        }
     }
 
     public int DecideWhoWins()
