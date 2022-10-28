@@ -50,3 +50,12 @@ MonoBehaviour:
   player2SavedGold: 0
   player1Lives: 5
   player2Lives: 5
+  player1Benefits: 00000000
+  player1BenefitsCosts: 00000000000000000000000000000000
+  player2Benefits: 00000000
+  player2BenefitsCosts: 00000000000000000000000000000000
+  player1Detriments: 00000000
+  player1DetrimentsCosts: 00000000000000000000000000000000
+  player2Detriments: 00000000
+  player2DetrimentsCosts: 00000000000000000000000000000000
+  hasResetFirst: 0

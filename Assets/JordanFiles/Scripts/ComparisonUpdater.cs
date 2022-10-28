@@ -46,7 +46,7 @@ public class ComparisonUpdater : MonoBehaviour
     {
         if(myInfo.player1Lives == 0 || myInfo.player2Lives == 0)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(10);
         }
         else
         {
