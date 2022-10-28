@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public bool isStart;
     public bool isSettings;
     public bool isQuit;
+    public bool isHowPlay;
 
     public bool isBack;
     public void OnMouseUp()
@@ -28,6 +29,11 @@ public class MainMenu : MonoBehaviour
         if (isBack)
         {
             Application.LoadLevel(0);
+        }
+
+        if (isHowPlay)
+        {
+            Application.LoadLevel(9);
         }
     }
 }
