@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public bool isQuit;
 
     public bool isBack;
-    void OnMouseUp()
+    public void OnMouseUp()
     {
         if (isStart)
         {
