@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -28.95}
+  m_AnchoredPosition: {x: 3, y: 76}
   m_SizeDelta: {x: 242.15, y: 193.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210961222
@@ -186,7 +186,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...
+  m_text: 2 players each take it in turn clicking gold nuggets on a rock, at the
+    end of each players round you can buy buffs or debuffs to help you collect more.
+    at the end of every round the person with most gold wins.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74c8fbec0e25a914782d102e52dfbad9, type: 2}
   m_sharedMaterial: {fileID: 105247279115998646, guid: 74c8fbec0e25a914782d102e52dfbad9, type: 2}
@@ -213,8 +215,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -291,6 +293,7 @@ MonoBehaviour:
   isStart: 0
   isSettings: 0
   isQuit: 1
+  isHowPlay: 0
   isBack: 0
 --- !u!65 &210961226
 BoxCollider:
@@ -1014,6 +1017,7 @@ MonoBehaviour:
   isStart: 1
   isSettings: 0
   isQuit: 0
+  isHowPlay: 0
   isBack: 0
 --- !u!114 &1843319670
 MonoBehaviour:
@@ -1372,6 +1376,7 @@ MonoBehaviour:
   isStart: 0
   isSettings: 0
   isQuit: 0
+  isHowPlay: 0
   isBack: 1
 --- !u!65 &2004187342
 BoxCollider:
