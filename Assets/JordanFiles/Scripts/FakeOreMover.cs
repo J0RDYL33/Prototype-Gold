@@ -125,8 +125,13 @@ public class FakeOreMover : MonoBehaviour
         }
 
         //Move the nugget
-        float newX = Random.Range(xBounds.y, xBounds.x + 0.1f);
-        float newy = Random.Range(yBounds.y, yBounds.x + 0.1f);
+        //float newX = Random.Range(xBounds.y, xBounds.x + 0.1f);
+        //float newy = Random.Range(yBounds.y, yBounds.x + 0.1f);
+        //this.gameObject.transform.position = new Vector2(newX, newy);
+
+        //CHANGES: Moves off screen until real nugget is clicked
+        float newX = -100;
+        float newy = -100;
         this.gameObject.transform.position = new Vector2(newX, newy);
     }
 

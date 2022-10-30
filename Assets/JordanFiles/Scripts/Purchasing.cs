@@ -53,8 +53,11 @@ public class Purchasing : MonoBehaviour
             secondBen = secondBen % 4;
         }
 
-        benCards[firstBen].transform.localPosition = slot1Pos;
-        benCards[secondBen].transform.localPosition = slot2Pos;
+        if (myInfo.hasResetFirst == true)
+        {
+            benCards[firstBen].transform.localPosition = slot1Pos;
+            benCards[secondBen].transform.localPosition = slot2Pos;
+        }
 
         int firstDet = Random.Range(0, 4);
         int secondDet = Random.Range(0, 4);

@@ -50,7 +50,7 @@ public class ComparisonUpdater : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
 }

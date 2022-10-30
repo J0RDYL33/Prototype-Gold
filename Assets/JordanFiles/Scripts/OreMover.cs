@@ -232,7 +232,7 @@ public class OreMover : MonoBehaviour
     {
         if (!isDupe)
         {
-            if(SceneManager.GetActiveScene().buildIndex == 1 && savedInfo.player1Score > 5)
+            if(SceneManager.GetActiveScene().buildIndex == 2 && savedInfo.player1Score > 5)
             {
                 savedInfo.player1Score -= 5;
             }

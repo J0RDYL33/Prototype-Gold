@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class CountdownTimer : MonoBehaviour
+public class MCountdownTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
 

@@ -626,6 +626,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a27309bf20a4c44a4d32818db1b0bb, type: 3}
+--- !u!114 &1089768964238229175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527448437013803514, guid: 67a27309bf20a4c44a4d32818db1b0bb, type: 3}
+  m_PrefabInstance: {fileID: 1089768964238229174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2532150241734522255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -640,7 +651,7 @@ PrefabInstance:
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1089768964238229175}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: dupeNugget
       value: 
@@ -661,6 +672,18 @@ PrefabInstance:
       propertyPath: cameraShaker
       value: 
       objectReference: {fileID: 1382827929}
+    - target: {fileID: 2532150242501976259, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532150242501976259, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532150242501976259, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2532150243075567457, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: m_Name
       value: Rock
@@ -712,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1089768964238229175}
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: player1Turn
       value: 1

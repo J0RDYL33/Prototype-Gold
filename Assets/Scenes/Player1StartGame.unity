@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &207920297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527448437013803514, guid: 67a27309bf20a4c44a4d32818db1b0bb, type: 3}
+  m_PrefabInstance: {fileID: 1089768964238229174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &414285566 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2532150243075567486, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
@@ -387,17 +398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zCoord: -10
---- !u!114 &1667347137 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1089768962680130679, guid: 67a27309bf20a4c44a4d32818db1b0bb, type: 3}
-  m_PrefabInstance: {fileID: 1089768964238229174}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2021009206
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 1667347137}
+      objectReference: {fileID: 207920297}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: dupeNugget
       value: 
@@ -892,7 +892,7 @@ PrefabInstance:
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 1667347137}
+      objectReference: {fileID: 0}
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: player1Turn
       value: 1
@@ -916,7 +916,7 @@ PrefabInstance:
     - target: {fileID: 8772685050802569889, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 1667347137}
+      objectReference: {fileID: 0}
     - target: {fileID: 8772685050802569889, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: dupeNugget
       value: 

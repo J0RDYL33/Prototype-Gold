@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,11 +16,11 @@ public class MainMenu : MonoBehaviour
     {
         if (isStart)
         {
-            Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
         }
         if (isSettings)
         {
-            Application.LoadLevel(8);
+            SceneManager.LoadScene(11);
         }
         if (isQuit)
         {
@@ -28,12 +29,12 @@ public class MainMenu : MonoBehaviour
 
         if (isBack)
         {
-            Application.LoadLevel(0);
+            SceneManager.LoadScene(0);
         }
 
         if (isHowPlay)
         {
-            Application.LoadLevel(9);
+            SceneManager.LoadScene(12);
         }
     }
 }
