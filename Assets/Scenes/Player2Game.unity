@@ -654,9 +654,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dee2bc12d963ca48bbb7565ce81ac07, type: 3}
+    - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 765165383}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: cameraShaker
       value: 
@@ -709,6 +717,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dee2bc12d963ca48bbb7565ce81ac07, type: 3}
+    - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 765165383}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
 --- !u!1 &2532150241734522256 stripped

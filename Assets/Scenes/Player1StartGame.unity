@@ -1075,6 +1075,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2021009206}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dee2bc12d963ca48bbb7565ce81ac07, type: 3}
+    - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 207920297}
@@ -1086,6 +1090,10 @@ PrefabInstance:
       propertyPath: rareNugget
       value: 
       objectReference: {fileID: 21300000, guid: 262c3997c7807ae40af6da2837bd3515, type: 3}
+    - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1336971820}
     - target: {fileID: 2532150242501976258, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: basicNugget
       value: 
@@ -1147,9 +1155,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dee2bc12d963ca48bbb7565ce81ac07, type: 3}
+    - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1336971820}
     - target: {fileID: 2805793407616874152, guid: 15cfcf3d03f179a4f886f2a3391e3b56, type: 3}
       propertyPath: player1Turn
       value: 1

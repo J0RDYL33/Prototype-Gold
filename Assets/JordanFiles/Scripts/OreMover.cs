@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class OreMover : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip clip;
+    public float volume=0.5f;
+
     public int playerScore;
     public TextMeshProUGUI scoreText;
     public bool player1Turn;
@@ -28,6 +32,8 @@ public class OreMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         xBounds.x = -3.1f;
         xBounds.y = 3.2f;
         yBounds.x = 1.1f;
@@ -132,6 +138,8 @@ public class OreMover : MonoBehaviour
 
     private void OnMouseDown()
     {
+
+        audioSource.PlayOneShot(clip, volume);
         Transform currentPos = this.gameObject.transform;
         //Spawn a particle system when the nugget is clicked
         particleTemp = Instantiate(nuggetParticles, currentPos);
