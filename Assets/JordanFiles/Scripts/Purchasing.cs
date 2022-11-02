@@ -74,20 +74,26 @@ public class Purchasing : MonoBehaviour
 
     private void MakePricesFair()
     {
-        if(myInfo.player1Lives > myInfo.player2Lives)
+        if (player1Turn == false)
         {
-            for(int i = 0; i < myInfo.player1Benefits.Length; i++)
+            if (myInfo.player1Lives > myInfo.player2Lives)
             {
-                myInfo.player2BenefitsCosts[i] -= 3;
-                myInfo.player2DetrimentsCosts[i] -= 3;
+                for (int i = 0; i < myInfo.player1Benefits.Length; i++)
+                {
+                    myInfo.player2BenefitsCosts[i] -= 3;
+                    myInfo.player2DetrimentsCosts[i] -= 3;
+                }
             }
         }
-        else if (myInfo.player1Lives < myInfo.player2Lives)
+        else
         {
-            for (int i = 0; i < myInfo.player1Benefits.Length; i++)
+            if (myInfo.player1Lives < myInfo.player2Lives)
             {
-                myInfo.player1BenefitsCosts[i] -= 3;
-                myInfo.player1DetrimentsCosts[i] -= 3;
+                for (int i = 0; i < myInfo.player1Benefits.Length; i++)
+                {
+                    myInfo.player1BenefitsCosts[i] -= 3;
+                    myInfo.player1DetrimentsCosts[i] -= 3;
+                }
             }
         }
     }

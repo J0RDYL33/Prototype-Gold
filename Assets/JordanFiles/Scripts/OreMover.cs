@@ -104,7 +104,7 @@ public class OreMover : MonoBehaviour
         {
             StartCoroutine(MoveTheNugget1());
         }
-        else if (player1Turn == true && savedInfo.player1Detriments[1] == true)
+        else if (player1Turn == false && savedInfo.player2Detriments[1] == true)
         {
             StartCoroutine(MoveTheNugget2());
         }
